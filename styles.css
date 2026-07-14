@@ -78,6 +78,53 @@ img { display: block; max-width: 100%; }
 .scene-copy h3 { margin-top: 12px; font-size: 40px; line-height: 64px; font-weight: 500; white-space: nowrap; }
 .scene-copy p { width: 425px; color: rgba(17,17,17,.55); font-size: 16px; line-height: 28px; }
 
+.content04 { height: clamp(678px, 66.667vw, 1280px); min-height: 678px; max-height: 1280px; background: #090202; color: #fff; overflow: hidden; }
+.search-header { position: absolute; z-index: 4; top: clamp(57px, 5.556vw, 107px); left: clamp(57px, 5.556vw, 107px); right: clamp(57px, 5.556vw, 107px); display: flex; align-items: flex-start; justify-content: space-between; }
+.search-title { display: flex; align-items: baseline; }
+.search-title h2 { font-size: clamp(36px, 3.056vw, 59px); line-height: clamp(58px, 5vw, 96px); font-weight: 500; white-space: nowrap; }
+.search-title span { margin-left: 14px; font-size: 20px; }
+.search-title p { margin-left: 10px; font-size: 20px; line-height: 32px; }
+.search-tabs { position: relative; width: 270px; height: 65px; padding: 10px 9px; border-radius: 100px; background: rgba(156,156,255,.05); display: grid; grid-template-columns: 120px 123px; align-items: center; }
+.tab-indicator { position: absolute; z-index: 0; top: 10px; left: 9px; width: 120px; height: 45px; border-radius: 100px; background: rgba(156,156,255,.1); transition: transform 320ms cubic-bezier(.22,.61,.36,1); }
+.search-tabs[data-active-index="1"] .tab-indicator { transform: translateX(120px); }
+.search-tab { position: relative; z-index: 1; height: 45px; padding: 0; border: 0; border-radius: 100px; background: transparent; color: rgba(255,255,255,.5); font: 400 16px/28px "PingFang SC", var(--font); cursor: pointer; transition: color 220ms ease; }
+.search-tab.is-active { color: #fff; font-weight: 500; }
+.search-tab:focus-visible { outline: 2px solid #88a1fe; outline-offset: 2px; }
+.search-stage { position: absolute; top: clamp(143px, 13.611vw, 261px); left: 0; width: 100%; height: clamp(480px, 47.5vw, 912px); }
+.search-panel { position: absolute; inset: 0; display: grid; grid-template-columns: 507px 588px; gap: 134px; padding: 0 80px 0 131px; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(28px); transition: opacity 320ms cubic-bezier(.22,.61,.36,1), transform 320ms cubic-bezier(.22,.61,.36,1), visibility 0s linear 320ms; }
+.search-panel.is-active { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(0); transition-delay: 0s; }
+.search-panel.from-left { transform: translateX(-28px); }
+.search-panel.from-right { transform: translateX(28px); }
+.search-panel.to-left { transform: translateX(-28px); opacity: 0; }
+.search-panel.to-right { transform: translateX(28px); opacity: 0; }
+.search-strategy { width: 507px; display: flex; flex-direction: column; gap: 73px; align-items: flex-end; }
+.architecture-visual { position: relative; width: 507px; height: 273px; }
+.architecture-base { position: absolute; inset: 0; width: 100%; height: 100%; }
+.architecture-highlight { position: absolute; left: 20px; top: 148px; width: 392px; height: auto; }
+.strategy-description { width: 478px; }
+.strategy-description h3 { margin-bottom: 20px; font-family: "PingFang SC", var(--font); font-size: 28px; line-height: 40px; font-weight: 500; color: #728cff; }
+.strategy-description h3 span { color: #edf1ff; }
+.strategy-description h4 { margin: 0 0 5px; font-size: 14px; line-height: 24px; font-weight: 500; }
+.strategy-description p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 24px; }
+.comparison-visual { width: 588px; padding-top: 59px; display: flex; flex-direction: column; gap: 33px; }
+.comparison-visual figure, .restaurant-visual { margin: 0; }
+.comparison-visual figure { width: 588px; text-align: center; }
+.comparison-visual figure:first-child img { width: 568px; height: 197px; object-fit: cover; object-position: top; margin-inline: auto; }
+.comparison-visual figure:last-child img { width: 568px; height: 228px; object-fit: cover; object-position: center; margin-inline: auto; }
+.comparison-visual figcaption, .restaurant-visual figcaption { margin-top: 0; color: rgba(255,255,255,.4); font-size: 14px; line-height: 24px; text-align: center; }
+.search-panel[data-panel-index="1"] { grid-template-columns: 507px 391px; gap: 235px; padding-left: 136px; padding-right: 171px; }
+.parking-strategy { gap: 43px; }
+.architecture-parking { height: 339px; }
+.parking-highlight { left: 20px; top: 83px; width: 457px; }
+.restaurant-visual { width: 391px; }
+.restaurant-frame { width: 391px; height: 541px; overflow: hidden; border-radius: 22px; box-shadow: 0 40px 72px #06091a; }
+.restaurant-frame img { width: 100%; height: 100%; object-fit: cover; }
+.restaurant-visual figcaption { margin-top: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-indicator, .search-tab, .search-panel { transition-duration: 0.001ms !important; }
+}
+
 @media (min-width: 1028px) and (max-width: 1439px) {
   .project-page { width: 100%; }
   .content { --s: calc(100vw / 1440); }
@@ -90,6 +137,12 @@ img { display: block; max-width: 100%; }
   .scene-card { grid-template-columns: 57% 1fr; padding: clamp(34px,3.33vw,48px) clamp(40px,3.89vw,56px); }
   .scene-copy h3 { font-size: clamp(32px,2.778vw,40px); }
   .scene-copy p { width: 100%; }
+  .content04 { height: 68vw; }
+  .search-tabs { transform: scale(.82); transform-origin: top right; }
+  .search-panel { transform-origin: top left; transform: scale(calc(100vw / 1440)); width: 1440px; }
+  .search-panel.is-active { transform: scale(calc(100vw / 1440)); }
+  .search-panel.from-left, .search-panel.to-left { transform: translateX(-20px) scale(calc(100vw / 1440)); }
+  .search-panel.from-right, .search-panel.to-right { transform: translateX(20px) scale(calc(100vw / 1440)); }
 }
 
 @media (min-width: 1441px) {
