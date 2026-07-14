@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg936\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \uc0\u24320 \u21457 \u26102 \u35831 \u36981 \u24490 \u20197 \u19979 \u21407 \u21017 \u12290 \
+\
+\uc0\u35270 \u35273 \u19968 \u33268 \u24615 \u20248 \u20808 \u12290 \
+\
+\uc0\u19981 \u35201 \u33258 \u34892 \u20462 \u25913 \u65306 \
+\
+\uc0\u23383 \u20307 \
+\
+\uc0\u39068 \u33394 \
+\
+\uc0\u38388 \u36317 \
+\
+\uc0\u22278 \u35282 \
+\
+\uc0\u38452 \u24433 \
+\
+\uc0\u24067 \u23616 \
+\
+\uc0\u32452 \u20214 \u27604 \u20363 \
+\
+\uc0\u19981 \u24471 \u25797 \u33258 \u22686 \u21152 \u26032 \u30340 \u27169 \u22359 \u12290 \
+\
+\uc0\u19981 \u24471 \u21024 \u38500 \u24050 \u26377 \u27169 \u22359 \u12290 \
+\
+\uc0\u25152 \u26377 \u39029 \u38754 \u20445 \u25345 \u32479 \u19968 \u35774 \u35745 \u35821 \u35328 \u12290 \
+\
+\uc0\u39029 \u38754 \u20043 \u38388 \u20351 \u29992 \u32479 \u19968  Grid\u12290 \
+}
