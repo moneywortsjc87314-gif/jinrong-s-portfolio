@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMI / UX Designer Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main class="project-page">
+    <section class="content content01" aria-labelledby="content01-title">
+      <div class="content01-inner">
+        <div class="vertical-guide" aria-hidden="true"><span>表</span><i></i><span>里</span></div>
+        <div class="content01-main">
+          <div class="problem-copy">
+            <div class="eyebrow-row">
+              <span class="eyebrow">行业问题</span>
+              <p>语音交互过于移动端化，忽略了驾驶安全阈值。</p>
+            </div>
+            <h1 id="content01-title">缺乏针对<span>「车载场景」</span>的语音交互系统</h1>
+          </div>
+          <div class="car-grid">
+            <article class="car-case">
+              <header><img src="./asset/project01/content01/icon-lixiang.svg" alt=""><span>理想汽车</span></header>
+              <img class="car-showcase" src="./asset/project01/content01/image-lixiang.png" alt="理想汽车语音交互界面">
+            </article>
+            <article class="car-case">
+              <header><img src="./asset/project01/content01/icon-xiaomi.svg" alt=""><span>小米汽车</span></header>
+              <img class="car-showcase" src="./asset/project01/content01/image-xiaomi.png" alt="小米汽车语音交互界面">
+            </article>
+            <article class="car-case">
+              <header><img src="./asset/project01/content01/icon-xiaopeng.svg" alt=""><span>小鹏汽车</span></header>
+              <img class="car-showcase" src="./asset/project01/content01/image-xpeng.png" alt="小鹏汽车语音交互界面">
+            </article>
+          </div>
+        </div>
+      </div>
+      <h2 class="chapter-title">用车场景与设计原则</h2>
+    </section>
+
+    <section class="content content02" aria-labelledby="content02-title">
+      <div class="load-chart" aria-label="圈层负荷分层，由内向外为驾驶负荷、可用负荷、交互负荷">
+        <img class="load-red" src="./asset/project01/content02/icon-red.svg" alt="">
+        <img class="load-orange" src="./asset/project01/content02/icon-orange.svg" alt="">
+        <img class="load-blue" src="./asset/project01/content02/icon-blue.svg" alt="">
+        <span class="label red">交互负荷</span>
+        <span class="label orange">可用负荷</span>
+        <span class="label blue">驾驶负荷</span>
+      </div>
+      <div class="strategy">
+        <div class="strategy-copy">
+          <h2 id="content02-title">基于「注意力管理」的动态回复策略</h2>
+          <p>车载场景下，语音交互根据不同角色的各状态进行动态回复。以在确保驾驶中安全行车，又能在放松时提供更沉浸的内容体验。</p>
+        </div>
+        <div class="state-grid">
+          <article class="state-card">
+            <div class="state-circle"><strong>01</strong><h3>高负荷状态</h3><small>驾驶中</small></div>
+            <i class="down-arrow"></i>
+            <p>注意力高度集中 精力受限</p>
+            <i class="down-arrow"></i>
+            <div class="principle">听觉优先 极简交互</div>
+          </article>
+          <article class="state-card">
+            <div class="state-circle"><strong>02</strong><h3>低负荷状态</h3><small>停车或智驾</small></div>
+            <i class="down-arrow"></i>
+            <p>注意力盈余放松 精力富余</p>
+            <i class="down-arrow"></i>
+            <div class="principle">视听兼顾 丰富沉浸</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content content03" aria-labelledby="content03-title">
+      <div class="scene-card">
+        <div class="scene-images">
+          <img src="./asset/project01/content03/image-showcase01.png" alt="驾驶场景">
+          <img src="./asset/project01/content03/image-showcase02.png" alt="停车场景">
+        </div>
+        <div class="scene-copy">
+          <div>
+            <h2 id="content03-title">注意力管理覆盖场景</h2>
+            <h3>「人找服务 服务找人」</h3>
+          </div>
+          <p>利用注意力管理的设计核心，结合两大场景分析语音回复策略与体验重点。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content content04" aria-labelledby="content04-title">
+      <header class="search-header">
+        <div class="search-title">
+          <h2 id="content04-title">人找服务</h2>
+          <span aria-hidden="true">·</span>
+          <p>搜索决策</p>
+        </div>
+        <div class="search-tabs" role="tablist" aria-label="搜索决策状态">
+          <span class="tab-indicator" aria-hidden="true"></span>
+          <button id="tab-driving" class="search-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-driving" tabindex="0" data-tab-index="0">驾驶状态</button>
+          <button id="tab-parking" class="search-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-parking" tabindex="-1" data-tab-index="1">停车或智驾</button>
+        </div>
+      </header>
+
+      <div class="search-stage">
+        <div id="panel-driving" class="search-panel is-active" role="tabpanel" aria-labelledby="tab-driving" data-panel-index="0">
+          <div class="search-strategy">
+            <div class="architecture-visual architecture-driving" aria-hidden="true">
+              <img class="architecture-base" src="./asset/project01/content04/icon-architecture.svg" alt="">
+              <img class="architecture-highlight" src="./asset/project01/content04/icon-动态决策信息.svg" alt="">
+            </div>
+            <div class="strategy-description">
+              <h3><span>设计策略</span>：信息减法，保驾驶安全</h3>
+              <h4>动态决策标签</h4>
+              <p>根据用户指令意图，根据大模型分析筛选后显示用户需要的信息标签，做到懂用户所需，删除冗余信息减少阅读负荷。</p>
+            </div>
+          </div>
+          <div class="comparison-visual">
+            <figure>
+              <img src="./asset/project01/content04/image-youhuahou.png" alt="搜索结果优化后界面">
+              <figcaption>优化后</figcaption>
+            </figure>
+            <figure>
+              <img src="./asset/project01/content04/image-youhuaqian.png" alt="搜索结果优化前界面">
+              <figcaption>优化前</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div id="panel-parking" class="search-panel" role="tabpanel" aria-labelledby="tab-parking" data-panel-index="1" aria-hidden="true" inert>
+          <div class="search-strategy parking-strategy">
+            <div class="architecture-visual architecture-parking" aria-hidden="true">
+              <img class="architecture-base" src="./asset/project01/content04/icon-architecture 2.svg" alt="">
+              <img class="architecture-highlight parking-highlight" src="./asset/project01/content04/icon-important.svg" alt="">
+            </div>
+            <div class="strategy-description">
+              <h3><span>设计策略</span>：信息减法，保驾驶安全</h3>
+              <h4>详细信息与深度长评</h4>
+              <p>静止 / 智驾场景下，用户注意力盈余。结合海外用户在外出时对支付方式、深度长评有较强的决策依赖。通过信息加法提升决策体验。</p>
+            </div>
+          </div>
+          <figure class="restaurant-visual">
+            <div class="restaurant-frame">
+              <img src="./asset/project01/content04/image-showcase.png" alt="餐厅搜索界面">
+            </div>
+            <figcaption>餐厅搜索</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content content05" aria-label="人找服务闲聊百科场景">
+      <article class="chat-card chat-card-driving">
+        <div class="chat-card-heading">
+          <div class="chat-card-title">
+            <h2>人找服务</h2>
+            <span aria-hidden="true">·</span>
+            <p>闲聊百科</p>
+          </div>
+          <p class="chat-card-intro">闲聊内容更侧重闲聊重在“即时情绪陪伴”。「语音播报」的交互形式进行回复，不显示界面降低用户注意力分散，保证实现集中在路面上。</p>
+        </div>
+        <img class="chat-driving-image" src="./asset/project01/content05/image-showcase1.webp" alt="驾驶状态下的语音播报示意">
+        <p class="chat-card-caption">驾驶状态 语音播报</p>
+      </article>
+
+      <article class="chat-card chat-card-parking">
+        <img class="chat-parking-image" src="./asset/project01/content05/image- showcase2.webp" alt="停车或智驾状态下的车载界面">
+        <div class="chat-parking-shade" aria-hidden="true"></div>
+        <p class="chat-parking-intro">当用户注意力盈余时，显示语音回复界面可大大提高信息获取效率，增强“视听双模态”的沉浸感。</p>
+        <div class="chat-answer-card">
+          <h3>卢浮宫东方瑰宝 齐聚浦东美术馆</h3>
+          <p>浦东美术馆携手卢浮宫呈现重磅特展，集结 16 至 19 世纪印度、伊朗、奥斯曼帝国近 300 件馆藏珍宝。涵盖陶瓷、珠宝、玉石、细密画、金属工艺等多元品类，多件文物首次走出卢浮宫来华展出。</p>
+        </div>
+        <p class="chat-card-caption">停车或智驾 语音与界面显示交互</p>
+      </article>
+    </section>
+
+    <section class="content06-track" aria-labelledby="content06-title">
+      <div class="content content06">
+        <div class="key-data-case">
+          <img class="key-data-case-bg" src="./asset/project01/content06/image- casebg.webp" alt="车载智能座舱关键数据界面">
+          <header class="key-data-heading">
+            <div class="key-data-title">
+              <h2 id="content06-title">人找服务</h2>
+              <span aria-hidden="true">·</span>
+              <p>闲聊百科</p>
+            </div>
+          </header>
+          <div class="key-data-copy">
+            <h3>设计策略：<span>「提炼关键数据」</span></h3>
+            <p>不论在驾驶还是静止状态下，用户进行数据询问时具有明确的查询目的，作为关键信息进行提炼显示方便用户查看及二次确认，提高信息获取效率防止信息丢失。</p>
+          </div>
+          <div class="stack-cards" aria-label="关键数据卡片滚动展示">
+            <img class="stack-card stack-card-01" src="./asset/project01/content06/image-showcase01.webp" alt="本周行驶总里程关键数据">
+            <img class="stack-card stack-card-02" src="./asset/project01/content06/image-showcase02.webp" alt="车辆胎压关键数据">
+            <img class="stack-card stack-card-03" src="./asset/project01/content06/image-showcase03.webp" alt="车辆信息关键数据">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content content07" aria-labelledby="content07-title">
+      <div class="trip-card">
+        <header class="trip-heading">
+          <div class="trip-title">
+            <h2 id="content07-title">人找服务</h2>
+            <span aria-hidden="true">·</span>
+            <p>行程规划</p>
+          </div>
+        </header>
+
+        <img class="trip-architecture" src="./asset/project01/content07/icon-arch.svg" alt="从出发地到目的地的智能行程规划结构">
+
+        <div class="trip-copy">
+          <h3>设计策略：<span>「预判操作」</span></h3>
+          <p>结合海外用户常用日历备忘记录习惯，发起行程时，AI 通过获取历史记忆、日历等信息分析。主动为用户提供续航补能、生活服务及日程安排融合进本次出行规划中。</p>
+        </div>
+
+        <div class="trip-visual">
+          <img class="trip-ipad" src="./asset/project01/content07/image-ipad.webp" alt="车载行程规划导航界面">
+          <img class="trip-route" src="./asset/project01/content07/image-route.webp" alt="包含日程提醒和续航推荐的路线信息">
+        </div>
+      </div>
+    </section>
+
+    <section class="content content08" aria-labelledby="content08-title">
+      <header class="vehicle-control-heading">
+        <div class="vehicle-control-title">
+          <h2 id="content08-title">人找服务</h2>
+          <span aria-hidden="true">·</span>
+          <p>车控车设</p>
+        </div>
+      </header>
+
+      <div class="vehicle-control-copy">
+        <h3>设计策略：<span>「预判操作」</span></h3>
+        <p>调研发现用户询问车控类信息都会伴随操作意图，我们将车控设置能力原子化复用到语音回复中。用户无需在设置界面中寻找操作，大大降低了操作成本且提高效率。</p>
+      </div>
+
+      <div class="vehicle-control-showcases" aria-label="车控车设语音回复示例">
+        <img class="control-showcase control-showcase-ambient" src="./asset/project01/content08/image-showcase4.webp" alt="氛围灯设置">
+        <img class="control-showcase control-showcase-tire" src="./asset/project01/content08/image-showcase1.webp" alt="右前轮胎气压过低提示">
+        <img class="control-showcase control-showcase-reading" src="./asset/project01/content08/image-showcase3.webp" alt="后排阅读灯控制">
+        <img class="control-showcase control-showcase-battery" src="./asset/project01/content08/image-showcase2.webp" alt="电池故障灯提示">
+      </div>
+    </section>
+
+    <section class="content content09" aria-labelledby="content09-title">
+      <div class="memory-heading">
+        <h2 id="content09-title">长期记忆·服务找人</h2>
+        <p>AI智能主动推荐</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
