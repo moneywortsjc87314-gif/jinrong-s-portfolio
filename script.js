@@ -121,3 +121,59 @@
   reducedMotion.addEventListener('change', requestRender);
   render();
 })();
+
+(() => {
+  const carousel = document.querySelector('.right-case-carousel');
+  if (!carousel) return;
+
+  const slides = [...carousel.querySelectorAll('[data-case-slide]')];
+  const dots = [...carousel.querySelectorAll('[data-case-dot]')];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let activeIndex = 0;
+  let timer = 0;
+  let isVisible = true;
+
+  const show = (nextIndex) => {
+    activeIndex = (nextIndex + slides.length) % slides.length;
+    slides.forEach((slide, index) => {
+      const active = index === activeIndex;
+      slide.classList.toggle('is-active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+    });
+    dots.forEach((dot, index) => {
+      const active = index === activeIndex;
+      dot.classList.toggle('is-active', active);
+      if (active) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+  };
+
+  const stop = () => {
+    window.clearInterval(timer);
+    timer = 0;
+  };
+
+  const start = () => {
+    stop();
+    if (!isVisible || reducedMotion.matches) return;
+    timer = window.setInterval(() => show(activeIndex + 1), 3000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      show(index);
+      start();
+    });
+  });
+
+  const observer = new IntersectionObserver(([entry]) => {
+    isVisible = entry.isIntersecting;
+    if (isVisible) start();
+    else stop();
+  }, { threshold: 0.15 });
+
+  observer.observe(carousel);
+  reducedMotion.addEventListener('change', start);
+  show(0);
+  start();
+})();

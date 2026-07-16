@@ -607,8 +607,159 @@ img { display: block; max-width: 100%; }
   line-height: 32px;
 }
 
+.content12 {
+  height: clamp(643px, 62.5vw, 1200px);
+  min-height: 643px;
+  max-height: 1200px;
+  overflow: hidden;
+  color: #111;
+  background: #f4f2fb;
+}
+.voice-broadcast-panel,
+.case-carousel-panel {
+  position: absolute;
+  top: 10.667%;
+  height: 77.333%;
+  border-radius: clamp(21px, 2.083vw, 40px);
+}
+.voice-broadcast-panel {
+  left: 8.333%;
+  width: 33.681%;
+  overflow: visible;
+  color: #fff;
+}
+.voice-broadcast-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.voice-broadcast-heading { position: absolute; z-index: 2; top: 9.483%; left: 9.897%; right: 7%; }
+.voice-broadcast-title { display: flex; align-items: baseline; white-space: nowrap; }
+.voice-broadcast-title h2 { font-size: clamp(32px, 3.056vw, 59px); line-height: clamp(51px, 5vw, 96px); font-weight: 500; }
+.voice-broadcast-title span { margin-left: 14px; font-size: 20px; line-height: 32px; }
+.voice-broadcast-title p { margin-left: 10px; font-size: 20px; line-height: 32px; }
+.voice-broadcast-heading > p { margin-top: 8px; font-size: 16px; line-height: 28px; }
+.voice-bubbles { position: absolute; inset: 0; z-index: 3; }
+.voice-bubble { position: absolute; height: auto; }
+.voice-bubble-01 { top: 31.034%; left: 32.99%; width: 74.227%; }
+.voice-bubble-02 { top: 52.299%; left: -15.464%; width: 76.289%; }
+.voice-bubble-03 { top: 66.954%; left: 57.732%; width: 70.103%; }
+.voice-broadcast-label,
+.case-carousel-label { position: absolute; bottom: 9.195%; font-size: clamp(20px, 1.944vw, 37px); line-height: clamp(32px, 2.778vw, 53px); font-weight: 500; }
+.voice-broadcast-label { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.case-carousel-panel { left: 43.681%; width: 47.986%; background: #fff; }
+.case-carousel-heading { position: absolute; top: 12.069%; left: 10.145%; right: 8%; }
+.case-carousel-heading h3 { font-size: 20px; line-height: 32px; font-weight: 500; }
+.case-carousel-heading p { margin-top: 20px; color: rgba(17,17,17,.48); font-size: 16px; line-height: 28px; }
+.right-case-carousel { position: absolute; top: 32.184%; left: 20.87%; width: 58.261%; height: 52.011%; }
+.case-carousel-stage { position: absolute; top: 0; left: 0; width: 100%; height: 82%; }
+.case-slide { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; visibility: hidden; transform: translateX(18px); transition: opacity 420ms ease, transform 420ms cubic-bezier(.22,1,.36,1), visibility 0s linear 420ms; pointer-events: none; }
+.case-slide.is-active { opacity: 1; visibility: visible; transform: translateX(0); transition-delay: 0s; }
+.case-slide img { display: block; width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+.case-carousel-pagination { position: absolute; left: 50%; bottom: 0; display: flex; align-items: center; gap: 16px; transform: translateX(-50%); }
+.case-dot { width: 11px; height: 11px; padding: 0; border: 0; border-radius: 999px; background: #e5e5e5; cursor: pointer; transition: width 220ms ease, background-color 220ms ease; }
+.case-dot.is-active { width: 28px; background: #dedede; }
+.case-dot:focus-visible { outline: 2px solid #8f67ff; outline-offset: 4px; }
+.case-carousel-label { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+
+.content13 {
+  height: clamp(643px, 62.5vw, 1200px);
+  min-height: 643px;
+  max-height: 1200px;
+  overflow: hidden;
+  color: #111;
+  background: #f4f1fb;
+}
+.comfort-service-card {
+  position: absolute;
+  top: 8.889%;
+  left: 8.333%;
+  width: 83.333%;
+  height: 82.222%;
+}
+.comfort-service-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.comfort-service-heading {
+  position: absolute;
+  z-index: 3;
+  top: 10.811%;
+  left: 4%;
+}
+.comfort-service-title { display: flex; align-items: baseline; white-space: nowrap; }
+.comfort-service-title h2 { font-size: clamp(32px, 3.056vw, 59px); line-height: clamp(51px, 5vw, 96px); font-weight: 500; }
+.comfort-service-title span { margin-left: 14px; font-size: 20px; line-height: 32px; }
+.comfort-service-title p { margin-left: 10px; font-size: 20px; line-height: 32px; }
+.comfort-service-copy {
+  position: absolute;
+  z-index: 3;
+  left: 4%;
+  top: 70.946%;
+  width: 39%;
+}
+.comfort-service-copy h3 { color: #5964ff; font-size: clamp(20px, 1.944vw, 37px); line-height: clamp(32px, 2.778vw, 53px); font-weight: 500; }
+.comfort-service-copy h3 span { color: #6679ff; }
+.comfort-service-copy p { margin-top: clamp(14px, 1.389vw, 27px); color: rgba(17,17,17,.48); font-size: 16px; line-height: 28px; }
+.comfort-service-showcases { position: absolute; inset: 0; z-index: 2; }
+.comfort-showcase { position: absolute; top: 10.676%; width: 27.083%; height: auto; }
+.comfort-showcase-left { left: 48%; }
+.comfort-showcase-right { left: 72.667%; }
+
+.content14 {
+  height: clamp(643px, 62.5vw, 1200px);
+  min-height: 643px;
+  max-height: 1200px;
+  overflow: hidden;
+  color: #fff;
+  background: #080611;
+}
+.summary-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.summary-inner {
+  position: absolute;
+  inset: 0;
+}
+.summary-heading {
+  position: absolute;
+  top: 5.778%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+.summary-heading h2 {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(32px, 3.056vw, 59px);
+  line-height: clamp(51px, 4.444vw, 85px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+.summary-panel {
+  position: absolute;
+  top: 14.222%;
+  left: 3.889%;
+  width: 92.222%;
+  height: 80.444%;
+  overflow: hidden;
+  border-radius: clamp(21px, 2.083vw, 40px);
+  background: #111;
+}
+.summary-flow {
+  position: absolute;
+  top: 4.696%;
+  left: 5.873%;
+  width: 88.328%;
+  height: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tab-indicator, .search-tab, .search-panel { transition-duration: 0.001ms !important; }
+  .case-slide, .case-dot { transition-duration: 0.001ms !important; }
   .content06-track { height: var(--content06-stage-height); }
   .content06 { --card-01-progress: 1 !important; --card-02-progress: 1 !important; position: relative; top: 0; }
   .stack-card { will-change: auto; }
